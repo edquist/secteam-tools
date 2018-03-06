@@ -111,7 +111,7 @@ echo "Dependencies are installed"
 echo "Setting up the environment..."
 echo "Checking the openssl version..."
 OPENSSLVERSION=`openssl version -v`
-if echo "$OPENSSLVERSION" | grep -q "OpenSSL 1.0."; 
+if echo "$OPENSSLVERSION" | fgrep -q "OpenSSL 1.0."
 then
     echo "OpenSSL version is good."
 else
