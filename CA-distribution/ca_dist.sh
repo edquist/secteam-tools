@@ -140,7 +140,7 @@ gpg --default-key $OSGSECKEYID --lsign-key 3CDBBC71
 
 #Checkout a copy of the svn repository
 echo "Checking out the SVN repository..." 
-svn co https://vdt.cs.wisc.edu/svn/certs
+svn co https://vdt.cs.wisc.edu/svn/certs  # Whaaaaa?
 
 echo "Environment setup is completed."
 #--------------------Environment setup completed--------------------
