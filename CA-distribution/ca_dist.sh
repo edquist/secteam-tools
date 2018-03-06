@@ -398,7 +398,7 @@ osg-build rpmbuild .;
 #Step for branch 3.3: 
 osg-build --repo=3.3 rpmbuild .;
 
-#Create a hidden directory with name ‘globus’
+#Create .globus directory
 mkdir /root/.globus
 
 echo "Have you already converted your user certificate (.p12) file into userkey.pem file (without the certificate) and into usercert.pem file (without the key)?"
