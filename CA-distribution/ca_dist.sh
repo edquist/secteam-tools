@@ -354,6 +354,9 @@ fi
 rpm -Uvh https://repo.grid.iu.edu/osg/3.3/osg-3.3-el7-release-latest.rpm
 
 #Check out the package source from subversion
+# XXX: is this used?  What dir is this supposed to be run from?
+# TODO: suggest only checking out areas to be used - entire redhat area
+#       is a bit big
 svn co https://vdt.cs.wisc.edu/svn/native/redhat 
 
 
@@ -368,6 +371,8 @@ scp osg-certificates-${MMM}NEW.tar.gz "${USERNAME_VDT}@library.cs.wisc.edu:/p/vd
 scp osg-certificates-${MMM}IGTF*.tar.gz "${USERNAME_VDT}@library.cs.wisc.edu:/p/vdt/public/html/upstream/igtf-ca-certs/$NNN/"
 
 #Do svn update  
+# XXX: is this the svn tree we supposedly checked out earlier?
+#      if so, do the directories in fact match?
 cd /root/redhat/trunk/; 
 svn update;
 
