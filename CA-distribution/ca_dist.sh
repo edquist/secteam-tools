@@ -89,7 +89,7 @@ else
     echo "dpkg-deb, fakeroot, dpkg-scanpackages and debsigs are in your PATH."
 fi
 
-yum -y install dpkg
+yum -y install dpkg # is this used? why is it listed after the check for dpkg-*?
 yum -y install perl
 yum -y install cpan
 yum -y install perl-LWP-Protocol-https
