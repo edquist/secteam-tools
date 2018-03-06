@@ -478,13 +478,10 @@ echo "Enter the latest version since the previous commit"
 # XXX: input not sanitized
 read LATESTCOMMIT
 
-#Get previous version
-LATESTCOMMITMINUSONE=`expr $LATESTCOMMIT - 1`
-
 cd /root/redhat/branches/osg-3.3/osg-ca-certs
-svn merge -r${LATESTCOMMITMINUSONE}:${LATESTCOMMIT} ../../../trunk/osg-ca-certs .
+svn merge -c "${LATESTCOMMIT}" ../../../trunk/osg-ca-certs .
 cd /root/redhat/branches/osg-3.3/igtf-ca-certs
-svn merge -r${LATESTCOMMITMINUSONE}:${LATESTCOMMIT} ../../../trunk/igtf-ca-certs .
+svn merge -c "${LATESTCOMMIT}" ../../../trunk/igtf-ca-certs .
 
 cd /root/redhat/branches/osg-3.3
 svn commit -m "Official builds-OSG certificates distribution $OUR_CERTS_VERSION. (Jira Ticket: $JIRA_TICKET)"
