@@ -297,8 +297,8 @@ cd "$CABASEDIR/$OUR_CERTS_VERSION"
 ../make-manifest 
 
 #Inspect the manifest file (ca-certs-version)
-cat ca-certs-version | grep -q $OUR_CERTS_VERSION
-if [ $? -ne 0 ];
+# cat ca-certs-version | grep -q "$OUR_CERTS_VERSION"  # <-- bad, what kind of match do we want here?
+if fgrep -q "$OUR_CERTS_VERSION" ca-certs-version;
 then
     echo "Information in ca-certs-version file is incorrect."
     exit
