@@ -350,6 +350,7 @@ else
 fi
 
 #Install OSG repositories (command only for RHEL 7, CentOS 7, and SL 7)
+# XXX: what is this used for? there are no more yum commands
 rpm -Uvh https://repo.grid.iu.edu/osg/3.3/osg-3.3-el7-release-latest.rpm
 
 #Check out the package source from subversion
