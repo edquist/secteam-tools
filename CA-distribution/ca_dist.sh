@@ -555,7 +555,7 @@ read VARIABLES
 #Promote the Koji builds to osg-testing repository
 #Release EL6 and EL7 builds for testing
 cd /root/redhat/trunk/;
-grid-proxy-init
+grid-proxy-init  # XXX: already done earlier, right?  does the script take _that_ long?
 osg-promote osg-ca-certs igtf-ca-certs
 osg-promote -r 3.3-testing osg-ca-certs igtf-ca-certs 
 echo "Update the Jira ticket and change the workflow from open/in progress -> Ready for Testing"
