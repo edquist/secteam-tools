@@ -95,12 +95,12 @@ yum -y install cpan # Why?
 yum -y install perl-LWP-Protocol-https
 #yum -y install 'perl(IO::Socket::SSL)'   #this is only for EL6 <-- WRONG
 yum -y install 'perl(Sys::Syslog)'  # EL7 only?
-git clone https://github.com/opensciencegrid/osg-build
 cd osg-build/
 PATH=$PATH:`pwd`
 cd ..
 yum -y install 'perl(Date::Parse)'
 yum -y install yum-plugin-priorities  # <-- why here, after all the other yum cmds?
+git clone https://github.com/opensciencegrid/osg-build  # <-- is there a reason to prefer git over the most recent release?
 yum -y install fetch-crl
 yum -y install bc #bc is used above
 
