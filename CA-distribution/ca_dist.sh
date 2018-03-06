@@ -93,16 +93,16 @@ yum -y install dpkg # is this used? why is it listed after the check for dpkg-*?
 yum -y install perl
 yum -y install cpan # Why?
 yum -y install perl-LWP-Protocol-https
-#yum -y install 'perl(IO::Socket::SSL)'		#this is only for EL6
-yum -y install perl-Sys-Syslog
-yum -y install yum-plugin-priorities
+#yum -y install 'perl(IO::Socket::SSL)'   #this is only for EL6 <-- WRONG
+yum -y install 'perl(Sys::Syslog)'  # EL7 only?
 git clone https://github.com/opensciencegrid/osg-build
 cd osg-build/
 PATH=$PATH:`pwd`
 cd ..
 yum -y install 'perl(Date::Parse)'
+yum -y install yum-plugin-priorities  # <-- why here, after all the other yum cmds?
 yum -y install fetch-crl
-yum -y install bc
+yum -y install bc #bc is used above
 
 echo "Dependencies are installed"
 #--------------------Installation completed--------------------
