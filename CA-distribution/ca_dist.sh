@@ -399,7 +399,7 @@ osg-build rpmbuild .;
 osg-build --repo=3.3 rpmbuild .;
 
 #Create .globus directory
-mkdir /root/.globus
+mkdir -pm600 /root/.globus
 
 echo "Have you already converted your user certificate (.p12) file into userkey.pem file (without the certificate) and into usercert.pem file (without the key)?"
 read -p "Enter yes or no..." CONVERTED
