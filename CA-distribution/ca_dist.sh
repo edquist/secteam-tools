@@ -80,6 +80,7 @@ cp vdt-scripts/build-debian-tools builddebiantools.sh
 source ~/debian-build-tools/setup.sh
 #Verify that dpkg-deb, fakeroot, dpkg-scanpackages and debsigs are in your PATH
 which dpkg-deb fakeroot dpkg-scanpackages debsigs
+# where do dpkg-scanpackages and debsigs come from?
 if [ $? -ne 0 ];
 then
     echo "dpkg-deb, fakeroot, dpkg-scanpackages and debsigs are not in your PATH."
