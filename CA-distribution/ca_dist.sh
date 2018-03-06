@@ -229,6 +229,9 @@ nano "$CADIST/CHANGES"
 
 #Add new distribution to repository and make sure the permissions are OK i.e. rw- r-- r--
 cd "$CADIST"; chmod 644 *
+# XXX: we just check one?
+# consider using `find *crl_url *info *pem ! -perm 644` or just check the
+# return status of `chmod`
 export PERMISSIONS=$(ls -l *crl_url *info *pem | shuf -n 1)
 if [[ $PERMISSIONS =~ ^-rw-r--r-- ]];
 then
