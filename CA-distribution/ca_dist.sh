@@ -151,16 +151,15 @@ echo "Environment setup is completed."
 #--------------------Process for IGTF CA i.e. IGTFNEW--------------------
 echo "Preparing for IGTFNEW..."
 #Change to an empty working directory and set $CAWORKDIR to the path
-cd `mktemp -d`
-export CAWORKDIR=`pwd`
+CAWORKDIR=`mktemp -d`
 
 #Checkout or update the OSG svn directories
 cd /certs/trunk/cadist/CA-Certificates-Base
 svn update
-export CABASEDIR=`pwd`
+export CABASEDIR=$PWD
 
 #Create a new distribution directory for the release
-cd $CABASEDIR
+#cd $CABASEDIR  # already here, right?
 mkdir -p "$OUR_CERTS_VERSION/certificates"
 export CADIST=$CABASEDIR/$OUR_CERTS_VERSION/certificates
 
