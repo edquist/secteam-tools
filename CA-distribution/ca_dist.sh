@@ -410,6 +410,7 @@ then
     read VARIABLES
     echo "What is the name of a OSG user certificate (.p12) file?"
     read USER_CERTIFICATE_AND_KEY
+    # XXX: verify file exists?
     #Convert user certificate (.p12) file into userkey.pem file without the certificate
     openssl pkcs12 -in "/root/.globus/$USER_CERTIFICATE_AND_KEY" -out /root/.globus/userkey.pem -nodes -nocerts
     chmod 600 /root/.globus/userkey.pem
