@@ -230,7 +230,7 @@ nano "$CADIST/CHANGES"
 #Add new distribution to repository and make sure the permissions are OK i.e. rw- r-- r--
 cd "$CADIST"; chmod 644 *
 export PERMISSIONS=$(ls -l *crl_url *info *pem | shuf -n 1)
-if [[ "$PERMISSIONS" =~ "-rw-r--r--" ]];
+if [[ $PERMISSIONS =~ ^-rw-r--r-- ]];
 then
     echo "Permissions are correct."
 else
