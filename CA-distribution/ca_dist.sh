@@ -194,6 +194,7 @@ for ca in "$CABASEDIR/$PREVIOUS_IGTFNEW/certificates"/* ; do echo "$ca"; diff "$
 
 #Generate the index files 
 cd "$CABASEDIR"
+# is OPENSSL_LOCATION necessary for mk-index.pl?
 OPENSSL_LOCATION=`which openssl`
 ./mk-index.pl --version "$OUR_CERTS_VERSION" --dir "$CADIST" --out "$CADIST/INDEX" --ssl1 "$OPENSSL_LOCATION" -format 1 --style new
 TOTAL_CA=$(./mk-index.pl --version "$OUR_CERTS_VERSION" --dir "$CADIST" --out "$CADIST/INDEX" --ssl1 "$OPENSSL_LOCATION" -format 1 --style new | tail -1)
