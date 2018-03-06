@@ -270,7 +270,7 @@ popd
 #--------------------Make the CA tarball distribution--------------------
 #Make sure the $CABASEDIR directory in your svn workspace is up-to-date and contains no local modifications
 cd "$CABASEDIR"
-svn status
+svn status  # XXX: result not examined?
 
 #Create the tarball
 cd "$CABASEDIR/$OUR_CERTS_VERSION"
