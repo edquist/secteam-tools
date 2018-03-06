@@ -341,6 +341,7 @@ echo "Creating a release using Koji..."
 
 #--------------------Setup/Preparation--------------------
 #Ensure that /etc/yum.conf has the following line in the [main] section, thereby enabling Yum plugins, including the priorities one: plugins=1
+# XXX: if you exit here, how can the user resume here after fixing yum.conf?
 if grep -q plugins=1 /etc/yum.conf; then
     echo "yum.conf file is good."
 else
