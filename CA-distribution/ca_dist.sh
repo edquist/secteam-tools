@@ -91,16 +91,16 @@ fi
 
 yum -y install dpkg # is this used? why is it listed after the check for dpkg-*?
 yum -y install perl
-yum -y install cpan
+yum -y install cpan # Why?
 yum -y install perl-LWP-Protocol-https
 #yum -y install 'perl(IO::Socket::SSL)'		#this is only for EL6
 yum -y install perl-Sys-Syslog
-cpan install Date::Parse
 yum -y install yum-plugin-priorities
 git clone https://github.com/opensciencegrid/osg-build
 cd osg-build/
 PATH=$PATH:`pwd`
 cd ..
+yum -y install 'perl(Date::Parse)'
 yum -y install fetch-crl
 yum -y install bc
 
