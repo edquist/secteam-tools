@@ -390,6 +390,7 @@ nano osg/osg-ca-certs.spec
 echo "Update location to osg-ca-certs/m.mm/osg-certificates-m.mmNEW.tar.gz"
 echo "Hit Enter to continue, else hit CTRL+c."
 read VARIABLES
+# XXX: wow, i've never seen this
 nano upstream/osg-certificates-NEW.source;
 
 #Create a test build on local environment and Koji
