@@ -28,19 +28,23 @@ export OSGSECKEYID=7FD42669
 #Set IGTF_CERTS_VERSION according to the release indicated
 echo "Enter the IGTF cert version according to the release indicated:"
 read IGTF_CERTS_VERSION
+# XXX: input not sanitized
 export IGTF_CERTS_VERSION
 
 #Set the OSG certificate distribution version 
 echo "Enter our IGTF cert version i.e. n.xIGTFNEW:"
 read OUR_CERTS_VERSION
+# XXX: input not sanitized
 export OUR_CERTS_VERSION
 
 echo "Enter your user name for VDT machine i.e. for library.cs.wisc.edu:"
 read USERNAME_VDT
+# XXX: input not sanitized
 export USERNAME_VDT
 
 echo "What is the Jira ticket number i.e. SOFTWARE-XXXX?"
 read JIRA_TICKET
+# XXX: input not sanitized
 export JIRA_TICKET
 
 #Set the variable n.nn
@@ -630,6 +634,7 @@ svn log -l 5 trunk/osg-ca-certs
 #difference between 23622 and 23621 encompasses all the changes you made
 
 echo “Enter the latest version since the previous commit”
+# XXX: input not sanitized
 read LATESTCOMMIT
 
 #Get previous version
